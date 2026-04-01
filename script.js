@@ -13,7 +13,7 @@ const portfolioItems = [
     duration: "12:18",
     base: "#17181e",
     accent: "#ff7a1a",
-    embedUrl: "Cinimatic%20edit/upscaled-video.mp4"
+    embedUrl: "cinematic%20edit.mp4"
   },
   {
     title: "Hook-First Reel Cut",
@@ -23,17 +23,17 @@ const portfolioItems = [
     duration: "00:34",
     base: "#121319",
     accent: "#ff8f47",
-    embedUrl: "shortsreels%20video/WhatsApp%20Video%202026-03-31%20at%2012.23.35%20PM.mp4"
+    embedUrl: "shortreels.mp4"
   },
   {
-    title: "Luxury Brand Spot",
+    title: "commercial edit",
     description: "Brand-focused commercial edit with premium pacing, product detail shots, and polished promotional storytelling.",
-    category: "brand",
-    label: "Brand Edit",
+    category: "commercial",
+    label: "Commercial Edit",
     duration: "05:42",
     base: "#161422",
     accent: "#8f61ff",
-    embedUrl: "Brand%20commercial%20edit/WhatsApp%20Video%202026-03-31%20at%2012.24.34%20PM.mp4"
+    embedUrl: "commercial edit.mp4"
   },
   {
     title: "Performance Car Reel",
@@ -53,7 +53,7 @@ const portfolioItems = [
     duration: "09:11",
     base: "#111318",
     accent: "#ffa84f",
-    embedUrl: "Cinimatic%20edit/WhatsApp%20Video%202026-03-31%20at%2012.24.16%20PM.mp4"
+    embedUrl: "cinematic%20edit2.mp4"
   },
   {
     title: "Fast Promo Reel",
@@ -63,7 +63,7 @@ const portfolioItems = [
     duration: "00:27",
     base: "#13151b",
     accent: "#ff7a1a",
-    embedUrl: "shortsreels%20video/upscaled-video.mp4"
+    embedUrl: "shortreels2.mp4"
   },
   {
     title: "Street Build Feature",
@@ -76,14 +76,14 @@ const portfolioItems = [
     embedUrl: "https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1&rel=0"
   },
   {
-    title: "Product Launch Commercial",
+    title: "commercial edit 2",
     description: "Commercial-style brand edit combining product storytelling, premium motion, and a clear conversion-focused finish.",
-    category: "brand",
-    label: "Brand Edit",
+    category: "commercial",
+    label: "Commercial Edit",
     duration: "00:39",
     base: "#181418",
     accent: "#ff8f47",
-    embedUrl: "Brand%20commercial%20edit/WhatsApp%20Video%202026-03-31%20at%209.53.59%20PM.mp4"
+    embedUrl: "commercial edit 2.mp4"
   }
 ];
 
