@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZENEX | Freelance Video Editor</title>
+  <meta name="description"
+    content="Personal portfolio website for a freelance video editor offering YouTube, Shorts, Reels, gaming videos, and promotional edits." />
+  <meta name="keywords"
+    content="freelance video editor, YouTube editor, Shorts editor, Reels editor, gaming video editor, promo video editor" />
+  <meta name="theme-color" content="#0f0f12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: 'var(--bg)',
+            foreground: 'var(--text)',
+            muted: {
+              DEFAULT: 'var(--bg-soft)',
+              foreground: 'var(--muted)'
+            },
+            border: 'var(--border)',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .text-balance {
+        text-wrap: balance;
+      }
+    }
+  </style>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css?t=1711907700" />
+</head>
+
+<body>
+  <div class="bg-orb bg-orb-right" aria-hidden="true"></div>
+
+  <header class="fixed top-0 z-50 w-full px-2 group transition-all duration-300" id="site-header"
+    style="margin-top: 1rem;">
+    <nav
+      class="mx-auto mt-2 w-[calc(100%-1rem)] max-w-4xl lg:w-fit px-6 lg:px-8 transition-all duration-300 rounded-2xl border border-[rgba(255,255,255,0.1)] bg-[#16161b]/50 backdrop-blur-lg"
+      id="site-nav-container">
+      <div class="relative flex items-center justify-between lg:justify-center py-3 lg:py-4">
+
+        <!-- Mobile Logo & Hamburger -->
+        <div class="flex w-full items-center lg:hidden">
+          <a href="#home" aria-label="home" class="flex items-center mr-auto">
+            <span class="font-bold text-xl tracking-wider text-white">ZENEX</span>
+          </a>
+          <div class="flex items-center gap-4 text-sm font-semibold">
+            <a href="#services" class="text-[#b8b1a7] hover:text-white duration-150">Services</a>
+            <a href="#webify" class="text-[#b8b1a7] hover:text-white duration-150">Webify</a>
+          </div>
+          <button id="mobile-menu-btn" aria-label="Open Menu"
+            class="relative z-20 block cursor-pointer p-2 text-white ml-2">
+            <i data-lucide="menu" id="menu-icon" class="m-auto size-6 duration-200 transition-all"></i>
+            <i data-lucide="x" id="close-icon"
+              class="absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 transition-all"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Links inline with ZENEX -->
+        <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <li>
+            <a href="#home" aria-label="home" class="flex items-center">
+              <span class="font-bold text-xl tracking-wider text-white">ZENEX</span>
+            </a>
+          </li>
+          <li><a href="#services" class="text-[#b8b1a7] hover:text-white block duration-150">Services</a></li>
+          <li><a href="#about" class="text-[#b8b1a7] hover:text-white block duration-150">About</a></li>
+          <li><a href="#webify" class="text-[#b8b1a7] hover:text-white block duration-150">Webify</a></li>
+          <li><a href="#payment" class="text-[#b8b1a7] hover:text-white block duration-150">Checkout</a></li>
+        </ul>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+          class="bg-[#0f0f12] hidden absolute top-full left-0 mt-3 w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-[rgba(255,255,255,0.1)] p-6 shadow-2xl shadow-zinc-300/20 lg:hidden">
+          <div class="w-full">
+            <ul class="space-y-6 text-base font-semibold">
+              <li><a href="#about" class="text-[#b8b1a7] hover:text-white block duration-150 mobile-link">About</a></li>
+              <li><a href="#payment" class="text-[#b8b1a7] hover:text-white block duration-150 mobile-link">Checkout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="overflow-hidden">
+    <div aria-hidden="true" class="z-[2] absolute inset-0 pointer-events-none isolate opacity-50 hidden lg:block"
+      style="contain: strict;">
+      <div
+        class="w-[35rem] h-[80rem] -translate-y-[350px] absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]">
+      </div>
+      <div
+        class="h-[80rem] absolute left-0 top-0 w-56 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]">
+      </div>
+      <div
+        class="h-[80rem] -translate-y-[350px] absolute left-0 top-0 w-56 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]">
+      </div>
+    </div>
+    <section id="home">
+      <div class="relative pt-28 md:pt-40 pb-8 md:pb-32">
+        <div class="absolute inset-0 -z-20">
+          <img src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
+            alt="background" class="absolute inset-x-0 top-56 hidden lg:top-32 dark:block w-full object-cover" />
+        </div>
+        <div aria-hidden="true" class="absolute inset-0 -z-10 w-full h-full"
+          style="background: radial-gradient(125% 125% at 50% 100%, transparent 0%, #0f0f12 75%)"></div>
+
+        <div class="mx-auto max-w-7xl px-6 relative z-10">
+          <div class="text-center sm:mx-auto lg:mx-auto lg:mt-0 reveal is-visible"
+            style="opacity: 1; transform: translateY(0);">
+
+            <h1 class="hero-title mt-4 md:mt-8 mx-auto text-balance lg:mt-16 text-white">
+              Professional Video Editing That Makes Your Content Stand Out
+            </h1>
+            <p class="mx-auto mt-4 md:mt-8 max-w-2xl text-balance text-sm md:text-lg text-[#b8b1a7] font-medium"
+              style="line-height: 1.6;">
+              I edit short-form content, cinematic videos, brand commercials, and Cinimatic edits with a clean
+              high-impact
+              style built to keep attention and make your content look premium.
+            </p>
+
+            <div
+              class="mt-6 md:mt-12 flex flex-row flex-nowrap items-center justify-center gap-2 md:gap-4 w-full max-w-[360px] md:max-w-none mx-auto">
+              <a href="#portfolio"
+                class="flex-1 min-w-0 inline-flex h-10 md:h-12 items-center justify-center rounded-xl px-2 md:px-8 text-[0.8rem] sm:text-sm md:text-base font-bold text-white transition-all hover:border-[rgba(255,255,255,0.18)] border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.02)] hover:-translate-y-0.5">
+                <span class="whitespace-nowrap truncate w-full text-center">View My Work</span>
+              </a>
+              <a href="#contact" data-link="instagram"
+                class="external-link flex-1 min-w-0 inline-flex h-10 md:h-12 items-center justify-center rounded-xl px-2 md:px-8 text-[0.8rem] sm:text-sm md:text-base font-bold text-white transition-all hover:border-[rgba(255,255,255,0.18)] border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.02)] hover:-translate-y-0.5">
+                <span class="whitespace-nowrap truncate w-full text-center">Instagram DM</span>
+              </a>
+            </div>
+
+            <ul
+              class="mt-6 md:mt-12 flex flex-wrap justify-center gap-2 md:gap-3 text-xs md:text-[1.05rem] text-[#b8b1a7] font-medium"
+              aria-label="Key benefits">
+              <li
+                class="rounded-full border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.03)] px-3 py-2 md:px-[1.1rem] md:py-[0.88rem]">
+                Fast turnaround</li>
+              <li
+                class="rounded-full border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.03)] px-3 py-2 md:px-[1.1rem] md:py-[0.88rem]">
+                Clear revisions process</li>
+              <li
+                class="rounded-full border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.03)] px-3 py-2 md:px-[1.1rem] md:py-[0.88rem]">
+                Deposit and final payment flow</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Services</p>
+        <h2>Fast, Polished Editing Support For Dynamic Content</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>Short Form Content Editing</h3>
+          <p>Vertical edits for Instagram Reels, Shorts, and TikTok with strong hooks, captions, and fast
+            retention-focused pacing.</p>
+          <a class="text-link external-link" data-link="instagram" href="#contact">Start a Project</a>
+        </article>
+
+        <article class="service-card reveal">
+          <h3>Cinematic Editing</h3>
+          <p>Moody pacing, sound design, transitions, and visual rhythm for edits that feel premium and intentional.</p>
+          <a class="text-link external-link" data-link="instagram" href="#contact">Start a Project</a>
+        </article>
+
+        <article class="service-card reveal">
+          <h3>Brand Commercial Edit</h3>
+          <p>Clean promotional edits for products and businesses with sharp storytelling, polish, and a clear sales
+            angle.</p>
+          <a class="text-link external-link" data-link="instagram" href="#contact">Start a Project</a>
+        </article>
+
+        <article class="service-card reveal">
+          <h3>Cinimatic wedding edit</h3>
+          <p>Fast automotive edits inspired by modern YouTube and Instagram car content with speed ramps, detail shots,
+            and cinematic motion.</p>
+          <a class="text-link external-link" data-link="instagram" href="#contact">Start a Project</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section portfolio-section" id="portfolio">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Work That Demonstrates Speed, Clarity, And Strong Visual Storytelling</h2>
+        <p>
+          Browse the categories below. Each project opens in a popup player so clients can review the
+          style quickly without leaving the page.
+        </p>
+      </div>
+
+      <div class="filter-row reveal" id="filterRow" aria-label="Portfolio categories">
+        <button class="filter-chip is-active" type="button" data-filter="shorts" aria-pressed="true">Shorts /
+          Reels</button>
+        <button class="filter-chip" type="button" data-filter="cinematic" aria-pressed="false">Cinematic Edit</button>
+        <button class="filter-chip" type="button" data-filter="brand" aria-pressed="false">Commercial Edit</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">About</p>
+        <h2>A personal editing partner, not a generic production team</h2>
+      </div>
+
+      <div class="about-layout">
+        <article class="about-copy reveal">
+          <p>
+            I turn raw footage into sharp, modern, and engaging videos with clean edits, strong pacing, and clear
+            storytelling. I deliver with clear communication, quick revisions, and reliable deadlines.
+            more professional and perform better.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section payment-section" id="payment">
+      <div class="payment-card reveal">
+        <div class="payment-copy">
+          <p class="eyebrow">Payment / Checkout</p>
+          <h2>Simple checkout options for deposits and remaining balances</h2>
+          <p>
+            Send project deposits or final balance payments through secure payment links.
+            UPI is currently supported.
+          </p>
+          <div class="payment-notes">
+            <span>Secure checkout</span>
+            <span>Deposit-friendly workflow</span>
+            <span>Clear project handoff</span>
+          </div>
+        </div>
+
+        <div class="payment-actions">
+          <button class="button button-primary upi-pay-btn" data-upi-type="deposit" type="button">Pay Deposit</button>
+          <button class="button button-secondary upi-pay-btn" data-upi-type="balance" type="button">Pay Remaining
+            Balance</button>
+          <p class="payment-help">Tap to see UPI payment details.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="section-heading reveal">
+        <p class="eyebrow">How It Works</p>
+        <h2>A Clear & Simple Workflow</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-card reveal">
+          <span class="timeline-number">1</span>
+          <h3>Client sends a message on Instagram</h3>
+          <p>Share the footage, goals, content type, and style references through a direct message.</p>
+        </article>
+
+        <article class="timeline-card reveal">
+          <span class="timeline-number">2</span>
+          <h3>We discuss the project and price</h3>
+          <p>Scope, turnaround, edits, and delivery format are agreed before any payment is requested.</p>
+        </article>
+
+        <article class="timeline-card reveal">
+          <span class="timeline-number">3</span>
+          <h3>Client pays the deposit</h3>
+          <p>A deposit confirms the booking and locks the project into the editing schedule.</p>
+        </article>
+
+        <article class="timeline-card reveal">
+          <span class="timeline-number">4</span>
+          <h3>Editing begins</h3>
+          <p>The edit is assembled, polished, and refined based on the agreed direction and references.</p>
+        </article>
+
+        <article class="timeline-card reveal">
+          <span class="timeline-number">5</span>
+          <h3>Final payment after delivery</h3>
+          <p>Once approved, the remaining balance is paid and the final files are delivered cleanly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing">
+      <!-- Horizontal Slide Carousel -->
+      <div class="pricing-carousel" id="pricingCarousel">
+        <div class="pricing-carousel-track" id="pricingCarouselTrack">
+
+          <!-- ═══ SLIDE 1: Video Editing Pricing ═══ -->
+          <div class="pricing-slide" data-slide="0">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Pricing</p>
+              <h2>Video Editing Pricing</h2>
+              <p>Trusted by creators worldwide. Explore which option fits your editing needs.</p>
+            </div>
+
+            <div class="pricing-toggle reveal" id="pricingToggle">
+              <div class="pricing-switch">
+                <button class="pricing-switch-btn is-active" data-period="monthly" type="button">Monthly</button>
+                <button class="pricing-switch-btn" data-period="yearly" type="button">Yearly</button>
+                <span class="pricing-switch-indicator"></span>
+              </div>
+            </div>
+
+            <div class="pricing-stack-wrapper reveal">
+              <div class="pricing-stack" id="pricingStack">
+                <!-- Starter -->
+                <article class="pricing-card" data-position="front">
+                  <div class="pricing-card-header">
+                    <h3>Basic</h3>
+                    <div class="pricing-amount">
+                      <span class="pricing-currency">₹</span>
+                      <span class="pricing-value" data-monthly="499" data-yearly="4990">499</span>
+                      <span class="pricing-period">/<span class="pricing-period-label">month</span></span>
+                    </div>
+                    <p class="pricing-card-desc">Great for small businesses and startups looking to get started</p>
+                  </div>
+                  <div class="pricing-card-body">
+                    <a class="button button-secondary pricing-btn" href="#contact">Get started</a>
+                    <div class="pricing-features">
+                      <p class="pricing-features-heading">Free includes:</p>
+                      <ul>
+                        <li><span class="pricing-dot"></span>Unlimited Cards</li>
+                        <li><span class="pricing-dot"></span>Custom background &amp; stickers</li>
+                        <li><span class="pricing-dot"></span>2-factor authentication</li>
+                        <li><span class="pricing-dot"></span>Priority support</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Business (Popular) -->
+                <article class="pricing-card pricing-card-popular" data-position="middle">
+                  <div class="pricing-card-header">
+                    <h3>Standard</h3>
+                    <div class="pricing-amount">
+                      <span class="pricing-currency">₹</span>
+                      <span class="pricing-value" data-monthly="1499" data-yearly="14990">1499</span>
+                      <span class="pricing-period">/<span class="pricing-period-label">month</span></span>
+                    </div>
+                    <p class="pricing-card-desc">Best value for growing businesses that need more advanced features</p>
+                  </div>
+                  <div class="pricing-card-body">
+                    <a class="button button-primary pricing-btn" href="#contact">Get started</a>
+                    <div class="pricing-features">
+                      <p class="pricing-features-heading">Everything in Starter, plus:</p>
+                      <ul>
+                        <li><span class="pricing-dot"></span>Advanced checklists</li>
+                        <li><span class="pricing-dot"></span>Custom fields</li>
+                        <li><span class="pricing-dot"></span>Serverless functions</li>
+                        <li><span class="pricing-dot"></span>Team collaboration</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Enterprise -->
+                <article class="pricing-card" data-position="back">
+                  <div class="pricing-card-header">
+                    <h3>Premium</h3>
+                    <div class="pricing-amount">
+                      <span class="pricing-currency">₹</span>
+                      <span class="pricing-value" data-monthly="2399" data-yearly="23990">2399</span>
+                      <span class="pricing-period">/<span class="pricing-period-label">month</span></span>
+                    </div>
+                    <p class="pricing-card-desc">Advanced plan with enhanced security and unlimited access for large
+                      teams</p>
+                  </div>
+                  <div class="pricing-card-body">
+                    <a class="button button-secondary pricing-btn" href="#contact">Get started</a>
+                    <div class="pricing-features">
+                      <p class="pricing-features-heading">Everything in Business, plus:</p>
+                      <ul>
+                        <li><span class="pricing-dot"></span>Multi-board management</li>
+                        <li><span class="pricing-dot"></span>Multi-board guest</li>
+                        <li><span class="pricing-dot"></span>Attachment permissions</li>
+                        <li><span class="pricing-dot"></span>Dedicated account manager</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <p class="pricing-swipe-hint" id="pricingSwipeHint">
+                <span>← Swipe cards to see more plans</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- ═══ SLIDE 2: Webify Pricing ═══ -->
+          <div class="pricing-slide" data-slide="1">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Pricing</p>
+              <h2>Webify Pricing</h2>
+              <p>Professional web solutions tailored to your brand. Pick the plan that fits your goals.</p>
+            </div>
+
+            <div class="pricing-toggle reveal" id="pricingToggleWebify">
+              <div class="pricing-switch">
+                <button class="pricing-switch-btn is-active" data-period="monthly" type="button">Monthly</button>
+                <button class="pricing-switch-btn" data-period="yearly" type="button">Yearly</button>
+                <span class="pricing-switch-indicator"></span>
+              </div>
+            </div>
+
+            <div class="pricing-stack-wrapper reveal">
+              <div class="pricing-stack" id="pricingStackWebify">
+                <!-- Basic -->
+                <article class="pricing-card" data-position="front">
+                  <div class="pricing-card-header">
+                    <h3>Basic</h3>
+                    <div class="pricing-amount">
+                      <span class="pricing-currency">₹</span>
+                      <span class="pricing-value" data-monthly="499" data-yearly="4990">499</span>
+                      <span class="pricing-period">/<span class="pricing-period-label">month</span></span>
+                    </div>
+                    <p class="pricing-card-desc">Perfect for personal sites and landing pages</p>
+                  </div>
+                  <div class="pricing-card-body">
+                    <a class="button button-secondary pricing-btn" href="#contact">Get started</a>
+                    <div class="pricing-features">
+                      <p class="pricing-features-heading">Includes:</p>
+                      <ul>
+                        <li><span class="pricing-dot"></span>Single page website</li>
+                        <li><span class="pricing-dot"></span>Mobile responsive design</li>
+                        <li><span class="pricing-dot"></span>Contact form integration</li>
+                        <li><span class="pricing-dot"></span>Basic SEO setup</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Pro (Popular) -->
+                <article class="pricing-card pricing-card-popular" data-position="middle">
+                  <div class="pricing-card-header">
+                    <h3>Standard</h3>
+                    <div class="pricing-amount">
+                      <span class="pricing-currency">₹</span>
+                      <span class="pricing-value" data-monthly="1000" data-yearly="10000">1000</span>
+                      <span class="pricing-period">/<span class="pricing-period-label">month</span></span>
+                    </div>
+                    <p class="pricing-card-desc">Best for businesses needing a full multi-page web presence</p>
+                  </div>
+                  <div class="pricing-card-body">
+                    <a class="button button-primary pricing-btn" href="#contact">Get started</a>
+                    <div class="pricing-features">
+                      <p class="pricing-features-heading">Everything in Basic, plus:</p>
+                      <ul>
+                        <li><span class="pricing-dot"></span>Multi-page website</li>
+                        <li><span class="pricing-dot"></span>Custom animations</li>
+                        <li><span class="pricing-dot"></span>CMS integration</li>
+                        <li><span class="pricing-dot"></span>Analytics dashboard</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Premium -->
+                <article class="pricing-card" data-position="back">
+                  <div class="pricing-card-header">
+                    <h3>Premium</h3>
+                    <div class="pricing-amount">
+                      <span class="pricing-currency">₹</span>
+                      <span class="pricing-value" data-monthly="1599" data-yearly="15990">1599</span>
+                      <span class="pricing-period">/<span class="pricing-period-label">month</span></span>
+                    </div>
+                    <p class="pricing-card-desc">Full-scale web application with custom features and ongoing support</p>
+                  </div>
+                  <div class="pricing-card-body">
+                    <a class="button button-secondary pricing-btn" href="#contact">Get started</a>
+                    <div class="pricing-features">
+                      <p class="pricing-features-heading">Everything in Standard, plus:</p>
+                      <ul>
+                        <li><span class="pricing-dot"></span>E-commerce integration</li>
+                        <li><span class="pricing-dot"></span>Custom API development</li>
+                        <li><span class="pricing-dot"></span>Priority maintenance</li>
+                        <li><span class="pricing-dot"></span>Dedicated project manager</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /track -->
+
+        <!-- Navigation dots & arrows -->
+        <div class="pricing-carousel-nav" id="pricingCarouselNav">
+          <button class="pricing-carousel-arrow pricing-carousel-prev" id="pricingPrev" type="button"
+            aria-label="Previous pricing">&larr;</button>
+          <div class="pricing-carousel-dots">
+            <button class="pricing-carousel-dot is-active" data-goto="0" type="button"
+              aria-label="Video Editing Pricing"></button>
+            <button class="pricing-carousel-dot" data-goto="1" type="button" aria-label="Webify Pricing"></button>
+          </div>
+          <button class="pricing-carousel-arrow pricing-carousel-next" id="pricingNext" type="button"
+            aria-label="Next pricing">&rarr;</button>
+        </div>
+
+      </div><!-- /carousel -->
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-card reveal">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>Ready to work together? Send a DM on Instagram.</h2>
+          <p>
+            Instagram is the main contact channel for project inquiries, editing requests, pricing, and
+            quick turnaround discussions.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="button button-primary button-large external-link" data-link="instagram" href="#">
+            DM me on Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> ZENEX. Personal freelance video editing portfolio.</p>
+  </footer>
+
+  <div class="modal" id="videoModal" hidden>
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close video">&times;</button>
+      <div class="modal-frame">
+        <video id="videoPlayer" controls autoplay playsinline></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPI Payment Modal -->
+  <div class="upi-modal" id="upiModal" hidden>
+    <div class="upi-modal-backdrop" id="upiModalBackdrop"></div>
+    <div class="upi-modal-dialog">
+      <button class="upi-modal-close" id="upiModalClose" type="button" aria-label="Close">&times;</button>
+      <div class="upi-modal-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="14" fill="rgba(255,122,26,0.12)" />
+          <path d="M16 20l4-8h3l-4 8h5l-8 14 2-10h-5l3-4z" fill="#ff7a1a" stroke="#ff7a1a" stroke-width="1.5"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3 class="upi-modal-title" id="upiModalTitle">Pay Deposit via UPI</h3>
+      <p class="upi-modal-desc">Send payment to this UPI number using PhonePe, Google Pay, Paytm, or any UPI app:</p>
+      <div class="upi-modal-number-box">
+        <span class="upi-modal-number" id="upiModalNumber">8147729010</span>
+        <button class="upi-modal-copy" id="upiCopyBtn" type="button" title="Copy number">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" />
+            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+          </svg>
+        </button>
+      </div>
+      <p class="upi-modal-copied" id="upiCopiedMsg">Copied!</p>
+      <p class="upi-modal-note">Open your UPI app → Enter this number → Send Money → Pay</p>
+    </div>
+  </div>
+
+  <script src="script.js?v=3"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+      let menuOpen = false;
+
+      const toggleMenu = () => {
+        menuOpen = !menuOpen;
+        if (menuOpen) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.classList.add('rotate-180', 'scale-0', 'opacity-0');
+          closeIcon.classList.remove('-rotate-180', 'scale-0', 'opacity-0');
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('rotate-180', 'scale-0', 'opacity-0');
+          closeIcon.classList.add('-rotate-180', 'scale-0', 'opacity-0');
+        }
+      };
+
+      mobileBtn.addEventListener('click', toggleMenu);
+      mobileLinks.forEach(l => l.addEventListener('click', () => { if (menuOpen) toggleMenu(); }));
+      lucide.createIcons();
+    });
+  </script>
+</body>
+
+</html>
