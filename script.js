@@ -139,7 +139,10 @@ function renderPortfolio(items) {
           <div class="portfolio-thumb">
             ${
               item.embedUrl.endsWith(".mp4") 
-              ? "<video src='" + item.embedUrl + "' muted loop autoplay playsinline style='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;'></video>" 
+              ? `<video src='${item.embedUrl}' muted loop autoplay playsinline style='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;'></video>
+                 <button type="button" class="video-mute-btn" aria-label="Unmute video">
+                   <i data-lucide="volume-x"></i>
+                 </button>`
               : ""
             }
           </div>
@@ -147,6 +150,10 @@ function renderPortfolio(items) {
       `
     )
     .join("");
+
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
 }
 
 function applyLinks() {
@@ -226,7 +233,26 @@ function setupFilters() {
 }
 
 function setupPortfolioEvents() {
-  // Empty as click and keyboard interactions to open modal are no longer needed
+  document.querySelectorAll('.video-mute-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const video = btn.closest('.portfolio-thumb').querySelector('video');
+      if (video) {
+        if (video.muted) {
+          video.muted = false;
+          btn.innerHTML = '<i data-lucide="volume-2"></i>';
+          btn.setAttribute('aria-label', 'Mute video');
+        } else {
+          video.muted = true;
+          btn.innerHTML = '<i data-lucide="volume-x"></i>';
+          btn.setAttribute('aria-label', 'Unmute video');
+        }
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      }
+    });
+  });
 }
 
 function setupModalEvents() {
